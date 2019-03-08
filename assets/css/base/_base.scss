@@ -31,6 +31,13 @@ ul, li {
 a {
 	text-decoration: none;
 	@include transition(all .3s ease);
+	display: inline-block;
+	&:hover,
+	&:active,
+	&:focus {
+		outline: 0;
+		text-decoration: none;
+	}
 }
 h1,h2,h3,h4,h5,h6,p,ul,li,dl,dt,dd,table,tr,td {
 	margin: 0;
@@ -38,4 +45,11 @@ h1,h2,h3,h4,h5,h6,p,ul,li,dl,dt,dd,table,tr,td {
 }
 h1,h2,h3,h4,h5,h6 {
 	line-height: 1;
+}
+[class^="flaticon-"]:before,
+[class*=" flaticon-"]:before,
+[class^="flaticon-"]:after,
+[class*=" flaticon-"]:after {
+	font-size: inherit;
+	margin-left: 0;
 }

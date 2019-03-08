@@ -1,0 +1,45 @@
+.social-network {
+	&__list {
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: flex-end;
+	}
+}
+.social-network__item {
+	line-height: 1;
+	& + & {
+		margin-left: 6px;
+	}
+	& &-icon {
+		line-height: 1;
+		display: inline-block;
+		&:before {
+			font-size: 2.4rem;
+		}
+	}
+
+	&--facebook {
+		color: #2556a0;
+		&:hover {
+			color: #2556a0;
+		}
+	}
+	&--twitter {
+		color: #00b8eb;
+		&:hover {
+			color: #00b8eb; 
+		}
+	}
+	&--google {
+		color: #fc887c;
+		&:hover {
+			color: #fc887c;
+		}
+	}
+	& &-link {
+		@extend .social-network__item-icon;
+		&:hover {
+			opacity: .5;	
+		}
+	}
+}
