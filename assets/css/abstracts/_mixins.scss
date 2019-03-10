@@ -3,3 +3,13 @@
 	-o-transition: $value;
 	transition: $value;
 }
+@mixin transform($value) {
+	-webkit-transform: $value;
+	-ms-transform: $value;
+	-o-transform: $value;
+	transform: $value;
+}
+@mixin d-inline-block($value) {
+	display: inline-block;
+	vertical-align: $value;
+}
