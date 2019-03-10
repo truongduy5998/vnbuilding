@@ -1,0 +1,194 @@
+.footer {
+	&__top {
+		font-size: 0;	
+		background-color: $color-04;
+		padding: .7rem 0;
+	}
+	&__top &__navigation,
+	&__top &__form {
+		@include d-inline-block(middle);
+	}
+	&__top &__navigation {
+		width: calc(100% - 40rem);
+	}
+	&__top &__list {
+		display: flex;
+		flex-flow: row wrap;
+	}
+	&__top &__link {
+		font-size: 1.6rem;
+		line-height: 3.6rem;
+		color: $color-05;
+	}
+	&__top &__item + &__item {
+		padding-left: 1.2rem;
+		margin-left: 1.2rem;
+		position: relative;
+		&:before {
+			content: '';
+			width: .1rem;
+			height: 1.6rem;
+			background-color: $color-05;
+			display: inline-block;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			@include transform(translateY(-50%));
+		}
+	}
+	&__top &__form {
+		width: 40rem;
+	}
+	.form {
+		&__group {
+			position: relative;
+		}
+		&__input {
+			width: 100%;
+			height: 3.2rem;
+			font-size: 1.3rem;
+			padding: 0 1.5rem;
+			border: none;
+			&::-webkit-input-placeholder {
+				color: $color-11;
+				font-style: italic;
+			}
+			&::-moz-placeholder {
+				opacity: 1;
+				color: $color-11;
+				font-style: italic;
+			}
+		}
+		&__button {
+			font: {
+				size: 1.4rem;
+				weight: 500;
+			}
+			color: $color-05;
+			text-transform: uppercase;
+			background-color: $color-10;
+			border: none;
+			cursor: pointer;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			width: 6rem;
+			text-align: center;
+			@include transition(all .4s ease);
+			&:hover {
+				width: 8rem;
+			}
+		}
+	}
+	& &__middle, & &__bottom {
+		background-color: $color-13;
+		position: relative;
+	}
+	& &__middle {
+		padding: 5.4rem 0 4.5rem;
+	}
+	& &__copyright {
+		font-size: 1.3rem;
+		padding: .7rem 0 .8rem;
+		border-top: 1px solid $color-14;
+		color: #595959;
+	}
+	&__copyright &__link {
+		color: $color-04;
+		font-weight: 500;
+	}
+	&__link {
+		&:hover {
+			color: $color-10;
+		}
+	}
+	& &__chat {
+		font-size: 0;
+		padding: .7rem 3rem;
+		display: inline-block;
+		background-color: $color-10;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		cursor: pointer;
+		> * {
+			@include d-inline-block(middle);
+			font-size: 1.4rem;
+			color: $color-05;
+		}
+	}
+	& &__chat &__icon {
+		line-height: 1;
+		&:before {
+			font-size: 2rem;
+		}
+	}
+	& &__chat &__icon + &__span  {
+		margin-left: .7rem;
+	}
+}
+.box-widget {
+	& &__logo {
+		max-width: 10rem;
+	}
+	& &__title {
+		color: $color-12;
+		position: relative;
+		font: {
+			size: 1.8rem;
+			weight: 500;
+		}
+		line-height: 1;
+		padding-bottom: .5rem;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			height: .2rem;
+			background-color: $color-14;
+		}
+	}
+	& &__title + &__content {
+		margin-top: 1.9rem;
+	}
+	&__list--items > &__item + &__item {
+		margin-top: 1.2rem;
+	}
+	&__list--address > &__item + &__item {
+		margin-top: 1.2rem;
+	}
+	&__list--address > &__item {
+		display: table;
+		width: 100%;
+		> * {
+			display: table-cell;
+			vertical-align: top;
+			color: $color-03;
+		}
+	}
+	&__list--address &__icon {
+		width: 3rem;
+	}
+	& &__link {
+		color: $color-03;
+		padding-left: 1.5rem;
+		position: relative;
+		&:before {
+			content: '\f10f';
+			font: {
+				size: 1rem;
+				family: 'Flaticon';
+			}
+			position: absolute;
+			left: 0;
+			top: 50%;
+			@include transform(translateY(-50%));
+		}
+		&:hover {
+			color: $color-10;
+		}
+	} 
+}
