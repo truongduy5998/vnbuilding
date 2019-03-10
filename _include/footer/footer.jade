@@ -1,1 +1,87 @@
-h1 FOOTER
+//- FOOTER TOP
+.footer__top
+	.container
+		.footer__navigation
+			ul.footer__list
+				li.footer__item
+					a.footer__link(href='#') Trang chủ
+				li.footer__item
+					a.footer__link(href='#') Giới thiệu
+				li.footer__item
+					a.footer__link(href='#') Sản phẩm
+				li.footer__item
+					a.footer__link(href='#') Dịch vụ
+				li.footer__item
+					a.footer__link(href='#') Dự án
+				li.footer__item
+					a.footer__link(href='#') Khách hàng tiêu biểu
+				li.footer__item
+					a.footer__link(href='#') Liên hệ
+		.footer__form
+			form.form(action='', method='')
+				.form__group
+					input.form__input(type='email', name="email_address" placeholder='Nhập địa chỉ email để nhận tin từ Vnbuilding', required)
+					button.form__button(type='submit') Gửi
+//- FOOTER MIDDLE
+.footer__middle
+	.container
+		.row
+			.col-2.align-self-center
+				.box-widget.box-widget--logo
+					a.box-widget__link--logo(href='#')
+						img.box-widget__logo(src='./assets/images/logo.png', alt='logo vnbuilding')
+			.col-4
+				.box-widget.box-widget--address
+					h3.box-widget__title Địa chỉ liên hệ
+					.box-widget__content
+						ul.box-widget__list.box-widget__list--address
+							li.box-widget__item
+								i.box-widget__icon.flaticon-factory
+								span Địa chỉ: SN27, Ngõ 65, Phố Vân Hồ III, P. Lê Đại Hành, Q. Hai Bà Trưng, TP. Hà Nội 
+							li.box-widget__item
+								i.box-widget__icon.flaticon-call-answer
+								span Điện thoại: 043 5590 389 Fax: 043 5590 389
+							li.box-widget__item
+								i.box-widget__icon.flaticon-envelope
+								span Email: vnbuildingthanglong@gmail.com
+			.col-3
+				.box-widget.box-widget--products
+					h3.box-widget__title Danh mục sản phẩm
+					.box-widget__content
+						ul.box-widget__list.box-widget__list--items
+							li.box-widget__item
+								a.box-widget__link(href='#') Rọ đá
+							li.box-widget__item
+								a.box-widget__link(href='#') Giấy dầu xây dựng
+							li.box-widget__item
+								a.box-widget__link(href='#') Lưới thép
+							li.box-widget__item
+								a.box-widget__link(href='#') Vật tư giao thông
+							li.box-widget__item
+								a.box-widget__link(href='#') Sản phẩm khác
+
+			.col-3
+				.box-widget.box-widget--services
+					h3.box-widget__title Dịch vụ
+					.box-widget__content
+						ul.box-widget__list.box-widget__list--items
+							li.box-widget__item
+								a.box-widget__link(href='#') Thi công hàn màng chống thấm
+							li.box-widget__item
+								a.box-widget__link(href='#') Thi công cọc cát
+							li.box-widget__item
+								a.box-widget__link(href='#') Thi công nhà dân dụng
+							li.box-widget__item
+								a.box-widget__link(href='#') Thi công chống thấm mái tôn
+							li.box-widget__item
+								a.box-widget__link(href='#') Dịch vụ khác
+//- FOOTER BOTTOM
+.footer__bottom
+	.container
+		.footer__copyright
+			| © Copyright 2016 
+			a.footer__link(href='#') Vnbuilding
+			| , All rights reserved
+	.footer__chat
+		i.footer__icon.flaticon-chat-speech-bubbles
+		span.footer__span Chat với chúng tôi
