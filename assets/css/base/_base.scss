@@ -19,6 +19,7 @@ body {
 		family: $font;
 	}
 	line-height: 1.8rem;
+	overflow-x: hidden; // menu main
 }
 .container {
 	max-width: 1170px;
@@ -39,7 +40,7 @@ a {
 		text-decoration: none;
 	}
 }
-h1,h2,h3,h4,h5,h6,p,ul,li,dl,dt,dd,table,tr,td {
+h1,h2,h3,h4,h5,h6,p,ul,li,dl,dt,dd,table,tr,td,figure,figcaption {
 	margin: 0;
 	padding: 0;
 }

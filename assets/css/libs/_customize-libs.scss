@@ -1,0 +1,81 @@
+/*============ SLIDER ============*/
+	// ARROWS
+		.slider__list {
+			.slick-arrow {
+				position: absolute;
+				top: 50%;
+				display: inline-block;
+				z-index: 3;
+				cursor: pointer;
+				color: $color-02;
+				background-color: rgba($color-05, .5);
+				@include transition(all .4s ease);
+				@include transform(translateY(-50%));
+				.icons {
+					width: 4rem;
+					height: 4rem;
+					display: inline-block;
+					text-align: center;
+					line-height: 4rem;
+					&:before {
+						font-size: 1.6rem;
+					}
+				}
+				&:hover {
+					color: $color-05;
+					background-color: $color-04;
+				}
+				&.prev {
+					left: 1.5rem;
+				}
+				&.next {
+					right: 1.5rem;
+				}
+			}
+		}
+	// DOTS
+		.slick-dots {
+			position: absolute;
+			bottom: 3rem;
+			line-height: 1;
+			> li + li {
+				margin-left: .5rem;
+			}
+			> li {
+				margin: 0;
+				width: auto;
+				height: auto;
+				button {
+					width: auto;
+					height: auto;
+					padding: 0;
+					&:before {
+						content: '';
+						width: 1.6rem;
+						height: 1.6rem;
+						border-radius: 50%;
+						border: 2px solid rgba($color-05, .8);
+						display: inline-block;
+						position: relative;
+						opacity: 1;
+						@include transition(all .3s ease);
+					}
+					&:hover {
+						&:before {
+							background-color: rgba($color-05, .8);
+						}
+					}
+				}
+				&.slick-active {
+					> button {
+						&:before {
+							background-color: rgba($color-05, .8);
+						}
+					}
+				}
+			}	
+		}
+	// DEFAULT
+		.slick-dotted.slick-slider {
+			margin-bottom: 0;
+		}

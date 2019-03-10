@@ -1,123 +1,353 @@
+/*============ HEADER ============*/
+	.header {
+		&__top-bar {
+			padding: .6rem 0;
+		}
+		&__header {
+			padding: 3rem 0;
+			background-image: url('../images/header/bg-header.png');
+			background-size: cover;
+			box-shadow: 1px 1px 3px 0 rgba(0,0,0,.3);
+			[class*="col-"]:last-child {
+				text-align: right;
+			}
+		}
+	}
 
-.header {
-	&__top-bar {
-		padding: .6rem 0;
-		// box-shadow: 1px 1px 3px 0 rgba(0,0,0,.3);
-	}
-	&__header {
-		padding: 3rem 0;
-		background-image: url('../images/header/bg-header.png');
-		background-size: cover;
-		box-shadow: 1px 1px 3px 0 rgba(0,0,0,.3);
-		[class*="col-"]:last-child {
-			text-align: right;
+/*============ HOTLINE ITEM ============*/
+	.hotline__item {
+		font-size: 0;
+		> * {
+			@include d-inline-block(middle);
+			font-size: 1.4rem;
+			color: $color-07;
+		}
+		& + & {
+			padding-left: 1.4rem;
+			border-left: 1px dotted #e0e0e0;
+			margin-left: 1.6rem;
+		}
+		& &-icon + &-info {
+			margin-left: 7px;
+			font-weight: 500;
+			span {
+				color: $color-06;
+			}
+		}
+		& &-link {
+			color: inherit;
+			&:hover {
+				color: $color-06;
+			}
 		}
 	}
-}
-.hotline__item {
-	font-size: 0;
-	> * {
-		display: inline-block;
-		vertical-align: middle;
-		font-size: 1.4rem;
-		color: $color-07;
-	}
-	& + & {
-		padding-left: 1.4rem;
-		border-left: 1px dotted #e0e0e0;
-		margin-left: 1.6rem;
-	}
-	& &-icon + &-info {
-		margin-left: 7px;
-		font-weight: 500;
-		span {
-			color: $color-06;
-		}
-	}
-	& &-link {
-		color: inherit;
-		&:hover {
-			color: $color-06;
-		}
-	}
-}
-.box-header {
-	display: flex;
-	flex-flow: row wrap;
-	& &__logo {
-		flex-basis: 12rem;
-		img {
-			max-width: 100%;
-		}
-	}
-	& &__text {
-		flex-grow: 1;
-		padding: 0 1rem;
-		img {
-			max-width: 40rem;
-		}
-	}
-	& &__description {
-		font: {
-			size: 1.6rem;
-			weight: 500;
-		}
-	}
-}
 
-.support {
-	display: inline-block;
-	text-align: initial;
-	& &__title {
-		color: $color-07;
-		font: {
-			size: 1.6rem;
-			weight: 700;
-		}
-		line-height: 3.6rem;
-		text-transform: uppercase;
-	}
-	& &__list {
+/*============ BOX HEADER ============*/
+	.box-header {
 		display: flex;
 		flex-flow: row wrap;
+		& &__logo {
+			flex-basis: 12rem;
+			img {
+				max-width: 100%;
+			}
+		}
+		& &__text {
+			flex-grow: 1;
+			padding: 0 1rem;
+			img {
+				max-width: 40rem;
+			}
+		}
+		& &__description {
+			font: {
+				size: 1.6rem;
+				weight: 500;
+			}
+		}
 	}
-}
-.support__item {
-	& + & {
-		padding-left: 15px;
-		margin-left: 15px;
-		border-left: 1px dotted #cbcbcb;
+	
+/*============ SUPPORT ============*/
+	.support {
+		display: inline-block;
+		text-align: initial;
+		& &__title {
+			color: $color-07;
+			font: {
+				size: 1.6rem;
+				weight: 700;
+			}
+			line-height: 3.6rem;
+			text-transform: uppercase;
+		}
+		& &__list {
+			display: flex;
+			flex-flow: row wrap;
+		}
 	}
-	& &-name {
-		font-size: 1.4rem;
-		color: $color-09;
-		line-height: 2rem;
+
+/*============ SUPPORT ITEM ============*/
+	.support__item {
+		& + & {
+			padding-left: 15px;
+			margin-left: 15px;
+			border-left: 1px dotted #cbcbcb;
+		}
+		& &-name {
+			font-size: 1.4rem;
+			color: $color-09;
+			line-height: 2rem;
+		}
+		& &-skype {
+			display: flex;
+			flex-flow: row wrap;
+			align-items: center;
+		}
+		& &-phone {
+			font: {
+				size: 1.8rem;
+				weight: 500;
+			}
+			color: $color-06;
+		}
+		& &-phone + &-link {
+			margin-left: 1rem;
+			color: #00d9ff;
+			line-height: 1;
+			&:hover {
+				opacity: .5;
+			}
+		}
+		& &-icon {
+			display: inline-block;
+			line-height: 1;
+			&:before {
+				font-size: 2rem;
+			}
+		}
 	}
-	& &-skype {
+
+/*============ MENU ============*/
+	.menu {
+		font-size: 0;
+		> [class*="menu-"] {
+			@include d-inline-block(top);
+		}
+		& &-default {
+			width: 27rem;
+		}
+		& &-main {
+			width: calc(100% - 27rem);
+		}
+	}
+
+/*============ MENU DEFAULT ============*/
+	.menu-default {
+		& &__title {
+			font-size: 0;
+			padding: 1.4rem 0;
+			color: $color-05;
+			background-color: $color-10;
+			text-align: center;
+			position: relative;
+			z-index: 10;
+			> * {
+				@include d-inline-block(middle);
+			}
+		}
+		& &__icon {
+			display: inline-block;
+			line-height: 1;
+			&:before {
+				font-size: 1.4rem;
+			}
+		}
+		& &__icon + &__span {
+			margin-left: 1.3rem;
+		}
+		& &__span {
+			font-size: 1.8rem;
+			text-transform: uppercase;
+		}
+		& &__list {
+			padding: 0 1.5rem;
+			border: 1px solid #d9d9d9;
+			border-top: none;
+		}
+		& &__item {
+			border-bottom: 1px dotted #ccc;
+			position: relative;
+		}
+		& &__item:last-child {
+			border: none;
+		}
+		&__item &__link {
+			color: $color-02;
+			padding: 1.5rem 0 1.4rem;
+			font-size: 1.6rem;
+			display: block;
+		}
+		&__item &__link--icon {
+			position: relative;
+			&:after {
+				content: '\f111';
+				font-family: 'Flaticon';
+				font-size: 1rem;
+				position: absolute;
+				right: 0;
+				top: 50%;
+				@include transform(translateY(-50%));
+				line-height: 1;
+			}
+		}
+		&__item:hover > &__link {
+			color: $color-10;
+		}
+		& &__sub-menu {
+			position: absolute;
+			z-index: 30;
+			top: 100%;
+			left: 100%;
+			min-width: 20rem;
+			background-color: $color-10;
+			padding: 0 1.5rem;
+			white-space: nowrap;
+			@include transform(translateX(1.5rem));
+			opacity: 0;
+			pointer-events: none;
+			@include transition(all .3s ease);
+			&:before {
+				content: '';
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 100%;
+				width: 1.5rem;
+			}
+		}
+		& &__sub-menu &__item {
+			border-color: $color-05;
+		}
+		& &__sub-menu &__link {
+			color: $color-05;
+		}
+		& &__sub-menu &__link--icon {
+			&:after {
+				content: '\f10f';
+			}
+		}
+		&__sub-menu > &__item:hover > &__link {
+			color: $color-02;
+		}
+		&__list > &__item:hover > &__sub-menu,
+		&__sub-menu > &__item:hover > &__sub-menu {
+			opacity: 1;
+			pointer-events: auto;
+			top: 0;
+		}
+	}
+
+/*============ NAVIGATION ============*/
+	.navigation {
+		position: relative;
 		display: flex;
 		flex-flow: row wrap;
-		align-items: center;
-	}
-	& &-phone {
-		font: {
-			size: 1.8rem;
-			weight: 500;
-		}
-		color: $color-06;
-	}
-	& &-phone + &-link {
-		margin-left: 1rem;
-		color: #00d9ff;
-		line-height: 1;
-		&:hover {
-			opacity: .5;
-		}
-	}
-	& &-icon {
-		display: inline-block;
-		line-height: 1;
+		background-color: $color-04;
 		&:before {
-			font-size: 2rem;
+			content: '';
+			position: absolute;
+			bottom: 0;
+			top: 0;
+			right: -999rem;
+			left: -999rem;
+			display: block;
+			background-color: $color-04;
+		}
+		> * {
+			position: relative;
+		}
+		& &__list {
+			font-size: 0;
+			> * {
+				@include d-inline-block(top);
+			}
+		}
+		& &__link {
+			font-size: 1.6rem;
+			text-transform: uppercase;
+			padding: 1.4rem 1.1rem;
+			color: $color-05;
+			&:hover {
+				background-color: rgba(0,0,0,.2);
+			}
+		}
+		& &__active > &__link {
+			background-color: rgba(0,0,0,.2);
+		}
+		& &__button {
+			flex-grow: 1;
+			position: relative;
+			cursor: pointer;
+			@include transition(all .3s ease);
+			&:hover {
+				background-color: rgba(0,0,0,.2);
+			}
+		}
+		& &__icon {
+			color: $color-05;
+			display: inline-block;
+			line-height: 1;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			@include transform(translate(-50%, -50%));
+			&:before {
+				font-size: 2rem;
+			}
 		}
 	}
-}
+
+/*============ SLIDER ITEM ============*/
+	.slider-item {
+		position: relative;
+		&:before {
+			content: '';
+			display: block;
+			padding-top: 42.89%;
+		}
+		& &__link {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+		& &__image {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+		& &__content {
+			text-align: center;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			pointer-events: none;
+			@include transform(translate(-50%, -50%));
+		}
+		& &__title {
+			color: $color-05;
+			font: {
+				size: 3.6rem;
+				weight: 400;
+			}
+			span {
+				font-size: 2.4rem;
+				display: block;
+				padding-top: .5rem;
+			}
+		}
+	}
