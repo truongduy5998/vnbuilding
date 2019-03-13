@@ -1,0 +1,21 @@
+@import ".././components/box-info";
+@import".././components/box-wrapper";
+@import".././components/box-product";
+@import".././components/advertisement";
+@import".././components/partners";
+#wrapper-content {
+	margin-top: 3rem;
+	margin-bottom: 5.3rem;
+}
+section + section {
+	margin-top: 50px;
+}
+.section-products {
+	[class*="col-"] {
+		margin-top: 3rem;
+		&:nth-child(-n + 5) {
+			margin-top: 0;
+		}
+	}
+	
+}

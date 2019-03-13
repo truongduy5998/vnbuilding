@@ -1,0 +1,23 @@
+.advertisement {
+	& &__link {
+		color: $color-05;
+		display: block;
+		padding: 2.4rem 0;
+		background-image: url('.././images/section-advertisement/advertisement.jpg');
+		background-size: cover;
+		text-align: center;
+	}
+	& &__title {
+		font: {
+			size: 2.8rem;
+			weight: 700;
+		}
+		text-transform: uppercase;
+		line-height: 3rem;
+	}
+	& &__title + &__description {
+		font-size: 1.8rem;
+		color: #e5dd7a;
+		margin-top: .4rem;
+	}
+}

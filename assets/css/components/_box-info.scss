@@ -1,0 +1,55 @@
+.box-info {
+	// height: 124px
+	display: table;
+	width: 100%;
+	padding: 1.9rem 1.6rem;
+	background-color: #f4f5f6;
+	@include transition(all .4s ease);
+	&:hover {
+		box-shadow: 1px 1px 15px 1px rgba(0,0,0,.5)
+	}
+	> * {
+		display: table-cell;
+		vertical-align: top;
+	}
+	& &__icon {
+		width: 3rem;
+		color: $color-04;
+		.icon {
+			line-height: 1;
+			display: inline-block;
+			&:before {
+				font-size: 2.2rem;
+			}
+		}	
+	}
+	& &__title {
+		font: {
+			size: 1.8rem;
+			weight: 500;
+		}
+	}
+	& &__title + &__description {
+		margin-top: .8rem;
+	}
+	& &__link {
+		color: $color-04;
+		position: relative;
+		padding-bottom: .6rem;
+		&:after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			width: 0;
+			left: 0;
+			height: 2px;
+			background-color: $color-04;
+			@include transition(all .5s ease);
+		}
+		&:hover  {
+			&:after {
+				width: 100%;
+			}
+		}
+	}
+}
