@@ -1,8 +1,8 @@
 .box-product {
-	padding: .6rem;
-	border: 1px solid $color-03;
-	@include transition(all .3s ease);
 	&--product {
+		padding: .6rem;
+		border: 1px solid $color-03;
+		@include transition(all .3s ease);
 		&:hover {
 			border-color: $color-04;
 			// box-shadow: 1px 1px 2px 0 rgba(0,0,0,.12); Default
@@ -75,10 +75,6 @@
 	& &__title + &__description {
 		margin-top: 1.3rem;
 		font-size: 1.4rem;
-	}
-	&--custom {
-		padding: 0;
-		border: none;
 	}
 	&--service &__image {
 		/*height: 160 - width: 270 ==> 59.26%*/
@@ -156,5 +152,15 @@
 		padding-top: 1.5rem;
 		border-top: 1px dotted $color-03;
 		margin-top: 1.5rem;
+	}
+	&__list &__view {
+		font-size: 0;
+		margin-top: .5rem;
+		line-height: 1;
+		> * {
+			@include d-inline-block(middle);
+			font-size: 12px;
+			color: $color-11;
+		}
 	}
 }

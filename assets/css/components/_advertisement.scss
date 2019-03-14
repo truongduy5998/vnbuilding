@@ -20,4 +20,10 @@
 		color: #e5dd7a;
 		margin-top: .4rem;
 	}
+	&--sub {
+		& &__image {
+			width: 100%;
+			height: auto;
+		}
+	}
 }

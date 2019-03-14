@@ -5,7 +5,6 @@
 @import".././components/partners";
 #wrapper-content {
 	margin-top: 3rem;
-	margin-bottom: 5.3rem;
 }
 section + section {
 	margin-top: 50px;
@@ -16,6 +15,20 @@ section + section {
 		&:nth-child(-n + 5) {
 			margin-top: 0;
 		}
+	}	
+}
+
+// PAGE 2
+.section-products-list {
+	[class*="col-"] {
+		margin-top: 3rem;
+		&:nth-child(-n + 3) {
+			margin-top: 0;
+		}
 	}
-	
+}
+.sidebar {
+	section + section {
+		margin-top: 1.4rem;
+	}
 }
