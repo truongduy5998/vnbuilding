@@ -1,0 +1,5 @@
+.related-product {
+	& &__title + &__content {
+		margin-top: 3rem;
+	}
+}

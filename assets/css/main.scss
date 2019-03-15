@@ -1,7 +1,9 @@
 @import "./abstracts/variables";
 @import "./abstracts/mixins";
 
+
 @import "./base/base";
+@import "./base/utilities";
 @import "./libs/customize-libs";
 
 @import "./layout/header";

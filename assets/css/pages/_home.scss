@@ -32,3 +32,27 @@ section + section {
 		margin-top: 1.4rem;
 	}
 }
+.sub-title {
+	color: $color-04;
+	font: {
+		size: 1.8rem;
+		weight: 700;
+	}
+	line-height: 3rem;
+	text-transform: uppercase;
+	position: relative;
+	margin-bottom: 2rem;
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 2px;
+		background-color: $color-03;
+	}
+}
+// PAGE 3
+@import ".././components/product-detail";
+@import ".././components/specifications";
+@import ".././components/related-products";

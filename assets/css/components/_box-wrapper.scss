@@ -60,12 +60,7 @@
 			right: 1rem;
 		}
 	}
-	& &__link {
-		position: absolute;
-		top: 50%;
-		right: 0;
-		color: $color-11;
-		@include transform(translateY(-50%));
+	& &__head > &__link {
 		&:before {
 			content: '\f109';
 			font-family: 'Flaticon';
@@ -73,11 +68,44 @@
 			@include d-inline-block(middle);
 			padding-right: .5rem;
 		}
+	}
+	& &__head > &__link, & &__nav-bar {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		@include transform(translateY(-50%));
+		
+	}
+	&__nav-bar &__list {
+		font-size: 0;
+		> * {
+			@include d-inline-block(top);
+		}
+	}
+	& &__link {
+		font-size: 1.4rem;
+		color: $color-11;
+		display: block;
 		&:hover {
 			color: $color-04;
 		}
 	}
-	& &__content {
-
+	&__nav-bar &__link {
+		font-style: italic;
+	}
+	&__nav-bar &__item + &__item {
+		padding-left: 1rem;
+		margin-left: 1rem;
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			width: 1px;
+			background-color: $color-11;
+			@include transform(skew(-20deg));
+		}
 	}
 }

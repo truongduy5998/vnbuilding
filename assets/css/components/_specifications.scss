@@ -1,0 +1,8 @@
+.specifications {
+	& &__title + &__content {
+		margin-top: 2.2rem;
+	}
+	& &__list > li + li {
+		margin-top: 1.5rem;
+	}
+}
