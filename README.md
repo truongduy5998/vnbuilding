@@ -1,12 +1,12 @@
 # VNBUILDING
-:rocket: :rocket:
+:rocket: :rocket: :apple: :lemon: :watermelon: :cookie: :peach: :banana:
 ## List of Pages
-    1. index.html :apple:
-    2. products-list.html :lemon:
-    3. product-detail.html :watermelon:
-    4. posts-list.html :cookie:
-    5. post-detail.html :peach:
-    6. contact :banana:
+    1. index.html
+    2. products-list.html 
+    3. product-detail.html
+    4. posts-list.html
+    5. post-detail.html 
+    6. contact
 ----------------------------------------
 
 
