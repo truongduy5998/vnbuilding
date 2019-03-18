@@ -1,0 +1,62 @@
+@import ".././components/box-info";
+@import".././components/box-wrapper";
+@import".././components/box-product";
+@import".././components/advertisement";
+@import".././components/partners";
+#wrapper-content {
+	margin-top: 3rem;
+}
+section + section {
+	margin-top: 50px;
+}
+.section-products {
+	[class*="col-"] {
+		margin-top: 3rem;
+		&:nth-child(-n + 5) {
+			margin-top: 0;
+		}
+	}	
+}
+
+// PAGE 2
+.section-posts-list,
+.section-products-list {
+	[class*="col-"] {
+		margin-top: 3rem;
+		&:nth-child(-n + 3) {
+			margin-top: 0;
+		}
+	}
+}
+.sidebar {
+	section + section {
+		margin-top: 1.4rem;
+	}
+}
+.sub-title {
+	color: $color-04;
+	font: {
+		size: 1.8rem;
+		weight: 700;
+	}
+	line-height: 3rem;
+	text-transform: uppercase;
+	position: relative;
+	margin-bottom: 2rem;
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 2px;
+		background-color: $color-03;
+	}
+}
+// PAGE 3
+@import ".././components/product-detail";
+@import ".././components/specifications";
+@import ".././components/related-products";
+
+
+@import ".././components/contact"

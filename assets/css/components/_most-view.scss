@@ -1,0 +1,19 @@
+.most-view {
+	padding: 9px 1.5rem 3.2rem;
+	border: 1px solid $color-03;
+	& &__title + &__content {
+		margin-top: 3.1rem;
+	}
+}
+.most-view .box-product__list .box-product .box-product__image {
+	width: 8.6rem;
+	&:before {
+		padding-top: 67.44%;
+	}
+}
+.most-view .box-product__list .box-product .box-product__image + .box-product__content {
+	width: calc(100% - 8.6rem);
+}
+.most-view .box-product__list .box-product + .box-product {
+	margin-top: 1.3rem;
+}

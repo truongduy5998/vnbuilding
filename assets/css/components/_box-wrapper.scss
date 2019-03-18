@@ -1,0 +1,111 @@
+.box-wrapper {
+	& &__head {
+		overflow-x: hidden;
+		position: relative; 
+		margin-bottom: 3rem;
+	}
+	& &__block-title {
+		display: inline-block;
+		position: relative;
+		&:before, &:after {
+			content: '';
+			position: absolute;
+			z-index: 3;
+		}
+		&:before {
+			right: 0;
+			width: 0;
+			height: 0;
+			border-bottom: 4rem solid $color-05;
+			border-left: 1rem solid transparent;
+			/*Chưa fix được bug khi nhiều dòng*/
+		}
+		&:after {
+			bottom: 0;
+			left: calc(100% - 1rem);
+			height: 2px;
+			background-color: $color-03;
+			width: 1000%;
+		}
+	}
+	& &__title {
+		font: {
+			size: 2.2rem;
+			weight: 700;
+		}
+		color: $color-05;
+		text-transform: uppercase;
+		line-height: 4rem;
+		min-height: 4rem;
+		min-width: 27rem;
+		padding-left: 1.5rem;
+		padding-right: 5rem;
+		display: inline-block;
+		background-image: linear-gradient($color-04 41%, #0546dd 51%);
+		position: relative;
+		&:before, &:after {
+			content: '';
+			width: .5rem;
+			background-color: $color-05;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			@include transform(skew(-15deg));
+		}
+		&:before {
+			right: 2rem;
+		}
+		&:after {
+			right: 1rem;
+		}
+	}
+	& &__head > &__link {
+		&:before {
+			content: '\f109';
+			font-family: 'Flaticon';
+			font-size: 1rem;
+			@include d-inline-block(middle);
+			padding-right: .5rem;
+		}
+	}
+	& &__head > &__link, & &__nav-bar {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		@include transform(translateY(-50%));
+		
+	}
+	&__nav-bar &__list {
+		font-size: 0;
+		> * {
+			@include d-inline-block(top);
+		}
+	}
+	& &__link {
+		font-size: 1.4rem;
+		color: $color-11;
+		display: block;
+		&:hover {
+			color: $color-04;
+		}
+	}
+	&__nav-bar &__link {
+		font-style: italic;
+	}
+	&__nav-bar &__item + &__item {
+		padding-left: 1rem;
+		margin-left: 1rem;
+		position: relative;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			width: 1px;
+			background-color: $color-11;
+			@include transform(skew(-20deg));
+		}
+	}
+}

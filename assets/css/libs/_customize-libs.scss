@@ -1,6 +1,6 @@
 /*============ SLIDER ============*/
 	// ARROWS
-		.slider__list {
+		.slider-general__list {
 			.slick-arrow {
 				position: absolute;
 				top: 50%;
@@ -8,18 +8,24 @@
 				z-index: 3;
 				cursor: pointer;
 				color: $color-02;
-				background-color: rgba($color-05, .5);
 				@include transition(all .4s ease);
 				@include transform(translateY(-50%));
 				.icons {
-					width: 4rem;
-					height: 4rem;
 					display: inline-block;
 					text-align: center;
-					line-height: 4rem;
 					&:before {
 						font-size: 1.6rem;
 					}
+				}
+			}
+		}
+		.slider__list {
+			.slick-arrow {
+				background-color: rgba($color-05, .5);
+				.icons {
+					width: 4rem;
+					height: 4rem;
+					line-height: 4rem;
 				}
 				&:hover {
 					color: $color-05;
@@ -30,6 +36,26 @@
 				}
 				&.next {
 					right: 1.5rem;
+				}
+			}
+		}
+		.partner__list {
+			.slick-arrow {
+				background-color: #edecec;
+				.icons {
+					width: 2rem;
+					height: 3rem;
+					line-height: 3rem;
+				}
+				&:hover {
+					background-color: $color-10;
+					color: $color-05;
+				}
+				&.prev {
+					left: 2.5rem;
+				}
+				&.next {
+					right: 2.2rem;
 				}
 			}
 		}
