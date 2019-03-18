@@ -19,6 +19,7 @@ section + section {
 }
 
 // PAGE 2
+.section-posts-list,
 .section-products-list {
 	[class*="col-"] {
 		margin-top: 3rem;
@@ -56,3 +57,6 @@ section + section {
 @import ".././components/product-detail";
 @import ".././components/specifications";
 @import ".././components/related-products";
+
+
+@import ".././components/contact"
